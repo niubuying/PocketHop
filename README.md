@@ -1,5 +1,6 @@
 # Pocket hopping: A Drug Repositioning Method Based On Binding Site Comparison of Co-ligand Protein Structures Via Graph Attention Network
 Pocket hopping is a protein "pocket hopping" approach for drug repurposing, targeting proteins with distinct structures yet shared (or highly similar) ligands. Centered on ligand-binding pockets, a graph attention neural network is employed to learn associations among such proteins. This model consistently outperforms conventional alternatives in external evaluations, successfully identifying structurally and evolutionarily unrelated new targets for existing drugs while pinpointing key amino acids underlying the "hopping" process. It is anticipated to deliver valuable support for structure-based drug design and the advancement of drug repurposing research.
+
 <img width="1604" height="750" alt="ab01a2e4-f91e-4ca1-bc2f-9651e200f7b4" src="https://github.com/user-attachments/assets/39dc76a5-5a4a-4d9c-9eee-275c04e5f656" />
 
 # Description
@@ -23,15 +24,27 @@ pip install scikit-learn
 ```
 
 # Running Pocket hopping
-## 1.Data preprocessing:
+## 1.Data acquisition via pdb database:
 ```bash
-python create_data.py
+cd data_preparation
+python fetch_pdbs.py
 ```
-## 2.Train:
+
+Generate molecular graphs from the collected data
+```bash
+cd data_preparation
+python generate_graphs.py
+```
+
+## 2.Data preprocessing:
+```bash
+python site_featurizer.py
+```
+## 3.Train:
 ```bash
 python training_graphbsm.py
 ```
-## 3.Predict:
+## 4.Predict:
 ```bash
 python predict_graphbsm.py
 ```
