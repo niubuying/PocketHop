@@ -48,5 +48,5 @@ python training_graphbsm.py
 ```bash
 python predict_graphbsm.py
 ```
-## 4.Related data and model are saved below:
+## Related data and model are saved below:
 https://zenodo.org/records/17572018
