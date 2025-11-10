@@ -1,1 +1,3 @@
 # PocketHop
+
+## Inspired by ligand "scaffold hopping", we propose a novel **protein "pocket hopping" approach** for drug repurposing, which targets proteins with distinct structures but shared (or highly similar) ligands. Focusing on ligand-binding pockets, we trained a graph attention neural network to learn associations among such proteins. This model achieves an internal prediction AUROC of 0.968 and consistently outperforms conventional models in external tests. It successfully identifies structurally/evolutionarily unrelated new targets for existing drugs (Fedratinib and Abexinostat) and pinpoints key amino acids for "hopping", providing valuable support for structure-based drug design and drug repurposing research.
